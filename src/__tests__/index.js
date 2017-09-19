@@ -55,6 +55,12 @@ test(
 );
 
 test(
+  'should preserve calc with constant values',
+  'foo{bar:calc(20px + constant(safe-area-inset-right))}',
+  'foo{bar:calc(20px + constant(safe-area-inset-right))}'
+)
+
+test(
   'should parse fractions without leading zero',
   'foo{margin:calc(2rem - .14285em)}',
   'foo{margin:calc(2rem - 0.14285em)}'
